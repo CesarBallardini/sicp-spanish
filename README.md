@@ -15,7 +15,7 @@ Los fuentes del libro se traducirán al castellano de manera incremental.
 
 ```bash
 git clone https://github.com/CesarBallardini/sicp-spanish
-cd sicp-spanish
+cd sicp-spanish/
 time vagrant up    # crea la VM y genera ePub, PDF y HTML5
 
 vagrant halt       # detiene la VM
