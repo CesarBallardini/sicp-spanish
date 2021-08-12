@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 cd /vagrant/sicp-pdf/src/
-grep -R -i "Inconsolata LGC" | cut -d: -f1  | sort -u | xargs sed -i -e "s/Inconsolata LGC/Inconsolata/g"
 
 make clean
+rm -f toc.xhtml index.xhtml html/*.html html/*.xhtml ../sicp.epub
+
 make
