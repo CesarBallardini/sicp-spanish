@@ -2,13 +2,16 @@
 
 https://en.wikipedia.org/wiki/Structure_and_Interpretation_of_Computer_Programs
 
-Structure and Interpretation of Computer Programs (SICP) is a computer science textbook by Massachusetts Institute of Technology professors Harold Abelson and Gerald Jay Sussman with Julie Sussman. It is known as the Wizard Book in hacker culture.[1][2] It teaches fundamental principles of computer programming, including recursion, abstraction, modularity, and programming language design and implementation.
+Structure and Interpretation of Computer Programs (SICP) is a computer science textbook
+by Massachusetts Institute of Technology professors Harold Abelson and Gerald Jay Sussman with Julie Sussman.
+It is known as the Wizard Book in hacker culture. 
+It teaches fundamental principles of computer programming, including recursion, abstraction, modularity,
+and programming language design and implementation.
 
 
 Se crea una VM con Virtualbox para generar las versiones  HTML5, ePub y PDF del libro SICP.
 
 Los fuentes del libro se traducirán al castellano de manera incremental.
-
 
 
 # Cómo usar este repositorio
