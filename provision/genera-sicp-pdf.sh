@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 cd /vagrant/sicp-pdf/src/
+cp /vagrant/sicp-es.texi sicp.texi
 
 make clean
-rm -f toc.xhtml index.xhtml html/*.html html/*.xhtml ../sicp.epub
 
 make
