@@ -28,7 +28,7 @@ vagrant destroy -f # destruye la VM y su contenido
 Los archivos generados son:
 
 * Libro en formato ePub: `sicp.epup`
-* Libro en formato PDF: `sicp.pdf`
+* [Libro en formato PDF](sicp-es.pdf)
 * Libro online: `sicp/html/index.xhtml`
 
 
