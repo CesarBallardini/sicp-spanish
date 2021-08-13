@@ -27,3 +27,15 @@ wget https://github.com/MihailJP/Inconsolata-LGC/releases/download/LGC-1.3.0/Inc
 sudo tar xvJf InconsolataLGC-1.3.0.tar.xz  -C /usr/local/share/fonts/
 sudo fc-cache -f -v
 
+
+# ayuda para traduccion online
+sudo apt-get install translate-shell -y
+trans -d en:es toolbox
+trans -b en:es "can be found at the following Web pages:"
+
+# ayuda para traduccion offline
+sudo apt-get install apertium apertium-en-es -y
+echo tool | apertium -a en-es
+echo "can be found at the following Web pages:" | apertium -a en-es
+echo "can be found at the following Web pages:" | apertium  en-es
+
