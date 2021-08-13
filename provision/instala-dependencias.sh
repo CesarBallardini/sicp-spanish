@@ -5,6 +5,7 @@ sudo  /usr/bin/updatedb.mlocate
 
 #sudo apt-get install texinfo inkscape texlive texlive-xetex latexmk texlive-fonts-extra fonts-inconsolata fonts-linuxlibertine -y
 sudo apt-get install texinfo inkscape texlive texlive-xetex latexmk texlive-fonts-extra -y
+sudo apt-get install texlive-lang-spanish -y
 
 sudo apt-get install ruby -y
 sudo gem install nokogiri
