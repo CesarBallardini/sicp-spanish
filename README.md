@@ -39,10 +39,13 @@ Los archivos generados son:
 * http://groups.csail.mit.edu/mac/classes/6.001/abelson-sussman-lectures/ Structure and Interpretation of Computer Programs / Video Lectures by Hal Abelson and Gerald Jay Sussman
 * https://mitpress.mit.edu/sites/default/files/sicp/index.html recursos para el libro
 * https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html el libro online, tal como lo publica el MIT
-* https://www.youtube.com/playlist?list=PLE18841CABEA24090 MIT 6.001 Structure and Interpretation, 1986 / MIT OpenCourseWare / These twenty video lectures
- by Hal Abelson and Gerald Jay Sussman are a complete presentation of the course, 
-given in July 1986 for Hewlett-Packard employees, and professionally produced by Hewlett-Packard Television. 
+* http://mirror.informatimago.com/scheme/library.readscheme.org/page1.html The Original 'Lambda Papers' by Guy Steele and Gerald Sussman
+
+
+* https://www.youtube.com/playlist?list=PLE18841CABEA24090 MIT 6.001 Structure and Interpretation, 1986 / MIT OpenCourseWare / These twenty video lectures by Hal Abelson and Gerald Jay Sussman are a complete presentation of the course, given in July 1986 for Hewlett-Packard employees, and professionally produced by Hewlett-Packard Television. 
 * https://www.youtube.com/playlist?list=PL7BcsI5ueSNFPCEisbaoQ0kXIDX9rR5FF 6.001 SICP: Structure and Interpretation of Computer Programs (2004) / MIT's legendary introductory computer science course, 6.001 Structure and Interpretation of Computer Programs (SICP), as taught by Prof. Eric Grimson in 2004.
+* https://archive.org/details/mit_ocw_sicp This course has been MIT's introductory pre-professional computer science subject since 1981. It emphasizes the role of computer languages as vehicles for expressing knowledge and it presents basic principles of abstraction and modularity, together with essential techniques for designing and implementing computer languages.
+* https://www.researchgate.net/publication/37597721_Structure_and_Interpretation_of_Computer_Programs_H_Abelson_GJ_Sussman_colaboracion_de_J_Sussman_prol_de_Alan_J_Perlis researchgate
 
 
 * https://docs.racket-lang.org/sicp-manual/index.html The sicp collection contains a #lang sicp language ideal for studying the book "Structure and Interpretation of Computer Programs" by Gerald Jay Sussman and Hal Abelson. The book is usually referred to simply as SICP. Estudiar SICP usando Racket Scheme. (`#lang sicp`)
@@ -88,6 +91,48 @@ Interactive SICP n. Interactive Structure and Interpretation of Computer Program
 * https://github.com/pepaslabs/SICPChapters This is simply a copy of https://github.com/sarabander/sicp-pdf which has been split into chapters.
 * https://github.com/pepaslabs/SICPChapterBooklets After splitting SICP into chapters, I then used impositioner to reformat it to be printed, cut in half, and bound into 5.5" x 8.5" booklets.
 * https://opendocs.github.io/sicp/ https://github.com/opendocs/sicp sólo el PDF: This PDF copy has been created from github.com/sarabander/sicp-pdf, a project by Andres Raba to render the textbook with Texinfo and LaTeX. This PDF copy is versioned as: Unofficial Texinfo Format 2.andresraba5.6.
-
+* http://www.sicpdistilled.com/ SICP Distilled / An idiosyncratic tour of SICP in Clojure
 * https://github.com/FedeHC/SICP-ES repositorio archivado con la traducción en formato Markdown del primer capítulo.
 
+## Biografías e historia del libro y el lenguaje Scheme
+
+* Hal Abelson is Class of 1922 Professor of Computer Science and Engineering in the Department of Electrical Engineering and Computer Science at MIT.
+  * https://groups.csail.mit.edu/mac/users/hal/hal.html
+  * https://en.wikipedia.org/wiki/Hal_Abelson 
+
+* Gerald Jay Sussman
+  * http://groups.csail.mit.edu/mac/users/gjs/gjs.html 
+  * https://en.wikipedia.org/wiki/Gerald_Jay_Sussman 
+  * https://www.infoq.com/presentations/We-Really-Dont-Know-How-To-Compute/ We Really Don't Know How To Compute! Gerald Jay Sussman compares our computational skills with the genome, concluding that we are way behind in creating complex systems such as living organisms, and proposing a few areas of improvement. 2011
+  * http://groups.csail.mit.edu/mac/users/gjs/6.945/ Adventures in Advanced Symbolic Programming (Officially: Large-scale Symbolic Systems)
+  * https://mitpress.mit.edu/books/structure-and-interpretation-classical-mechanics-second-edition Structure and Interpretation of Classical Mechanics, Second Edition ([ver](http://libgen.is/search.php?&req=Structure+and+Interpretation+of+Classical+Mechanics&phrase=1&view=simple&column=def&sort=year&sortmode=DESC))
+
+* ¿Porqué no se usa más el libro SICP en MIT?
+  * https://www.thestrangeloop.com/2011/we-really-dont-know-how-to-compute.html la conerencia donde dio la charla
+  * https://www.infoq.com/presentations/We-Really-Dont-Know-How-To-Compute/ vídeo
+  * https://github.com/lyssphacker/talks/blob/master/we-really-do-not-know-how-to-compute/we-really-do-not-know-how-to-compute.md transcripción
+  * https://github.com/lyssphacker/talks/blob/master/we-really-do-not-know-how-to-compute/slides/slides.pdf slides
+  * algunas discusiones online sobre ese tema:
+    * http://lambda-the-ultimate.org/node/5335 Programming by poking: why MIT stopped teaching SICP
+    * https://news.ycombinator.com/item?id=11628080 Programming by poking: why MIT stopped teaching SICP (posteriorscience.net)
+    * https://www.reddit.com/r/programming/comments/5gmgra/programming_by_poking_why_mit_stopped_teaching/
+    * https://mitadmissions.org/blogs/entry/the_end_of_an_era_1/ 
+
+* ¿Qué ha reemplazado a SICP en MIT?
+
+  * MIT 6.00 Introduction to Computer Science and Programming
+    * https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/
+    * https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00-introduction-to-computer-science-and-programming-fall-2008/video-lectures/
+
+  * MIT 6.01SC Introduction to Electrical Engineering and Computer Science I
+    * https://www.youtube.com/watch?v=3S4cNfl0YF0&list=PL9B24A6A9D5754E70 MIT 6.01SC Introduction to Electrical Engineering and Computer Science I, Spring 2011
+
+  * MIT 6.02 Introduction to EECS II: Digital Communication Systems 
+    * https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-02-introduction-to-eecs-ii-digital-communication-systems-fall-2012/
+    * https://www.youtube.com/playlist?list=PLUl4u3cNGP63ZWyJMdWIVtyweopUN3xt3 MIT 6.02 Introduction to EECS II: Digital Communication Systems, Fall 2012 / Instructors: Prof. Hari Balakrishnan, Prof. George Verghese / This collection includes twenty-four lectures that cover the three units of the course: bits, signals, and packets. Topics include source coding, channel coding, noise, filtering, modulation, delays, networks, and transport protocols.
+
+  * MIT 6.0001 Introduction to Computer Science and Programming in Python
+    * https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/
+    * https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/lecture-videos/index.htm
+
+* Otros cursos introductorios de programación: https://ocw.mit.edu/courses/intro-programming/
