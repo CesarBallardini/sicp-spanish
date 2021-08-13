@@ -3,7 +3,6 @@
 cd /vagrant/sicp/
 
 # clean:
-rm -f ../sicp.epub exercises.texi figures.texi content.opf toc.xhtml  html/fig/cover.png html/*.html html/*.xhtml
-# html/index.xhtml ??? debe eliminarse como parte del clean??
+rm -f ../sicp.epub exercises.texi figures.texi content.opf toc.xhtml  html/fig/cover.png html/*.html fig/chap?/*.pdf
 
 make
