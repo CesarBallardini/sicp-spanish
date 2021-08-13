@@ -1,3 +1,4 @@
+@comment vim:ft=texinfo:tw=72:fo=cqt:wm=0:cc=80
 @comment
 @comment             **********************************************************
 @setfilename         sicp
@@ -5563,6 +5564,7 @@ having to look at the things they stand for.
 
 @c @sp 1.0
 
+\selectlanguage{spanish}
 @noindent
 \lettrine[findent=1pt]{E}{n el} @ref{Capítulo 1} nos concentramos en
 los procesos computacionales y en el rol que cumplen los
@@ -5580,69 +5582,77 @@ aumentan la potencia de nuestro lenguaje pues nos permiten manipular,
 y por lo tanto razonar en términos de, métodos generales de
 computación.  Esta es gran parte de la esencia de la programación.
 
+En este capítulo vamos a usar datos más complejos.  Todos los procedimientos en
+el capítulo 1 operan sobre datos numéricos simples, y los datos simples no son
+suficientes para muchos de los problemasque quisiéramos tratar mediante una
+computación. 
+Los programas se diseñan típicamente para modelar fenómenos complejos, y con
+mucha frecuencia uno construye objetos computacionales compuestos por muchas
+partes, para modelar fenómenos del mundo real que tienen muchos aspectos.  Por
+lo tanto, si bien nuestro enfoque en el capítulo 1 estaba en la construcción de
+abstracciones mediante la combinación de procedimientos para formar
+procedimientos compuestos, en el capítulo actual el objetivo será otro aspecto
+clave de todo lenguaje de programación: los medios que brinda para construir
+abstracciones mediante la combinación de objetos de datos para formar
+@newterm{datos compuestos}.
 
-In this chapter we are going to look at more complex data.  All the procedures
-in chapter 1 operate on simple numerical data, and simple data are not
-sufficient for many of the problems we wish to address using computation.
-Programs are typically designed to model complex phenomena, and more often than
-not one must construct computational objects that have several parts in order
-to model real-world phenomena that have several aspects.  Thus, whereas our
-focus in chapter 1 was on building abstractions by combining procedures
-to form compound procedures, we turn in this chapter to another key aspect of
-any programming language: the means it provides for building abstractions by
-combining data objects to form @newterm{compound data}.
-
-Why do we want compound data in a programming language?  For the same reasons
-that we want compound procedures: to elevate the conceptual level at which we
-can design our programs, to increase the modularity of our designs, and to
-enhance the expressive power of our language.  Just as the ability to define
-procedures enables us to deal with processes at a higher conceptual level than
-that of the primitive operations of the language, the ability to construct
-compound data objects enables us to deal with data at a higher conceptual level
-than that of the primitive data objects of the language.
+¿Porqué queremos datos compuestos en un lenguaje de programación?  Por las
+mismas razones que queremos procedimientos compuestos: para elevar el nivel
+conceptual en el cual podemos diseñar nuestros programas, para aumentar la
+modularidad de nuestros diseños, y para mejorar el poder expresivo de nuestro
+lenguaje.  Así como la capacidad de definir procedimientos nos permite trabajar
+con procesos en un nivel conceptual mayor que el provisto por las operaciones
+primitivas del lenguaje, la capacidad de construir objetos de datos compuestos
+nos permite trabajar con datos en un nivel conceptual mayor que el de los
+objetos primitivos de datos del lenguaje.
 
 \enlargethispage{\baselineskip}
 
-Consider the task of designing a system to perform arithmetic with rational
-numbers.  We could imagine an operation @code{add-rat} that takes two rational
-numbers and produces their sum.  In terms of simple data, a rational number can
-be thought of as two integers: a numerator and a denominator.  Thus, we could
-design a program in which each rational number would be represented by two
-integers (a numerator and a denominator) and where @code{add-rat} would be
-implemented by two procedures (one producing the numerator of the sum and one
-producing the denominator).  But this would be awkward, because we would then
-need to explicitly keep track of which numerators corresponded to which
-denominators.  In a system intended to perform many operations on many rational
-numbers, such bookkeeping details would clutter the programs substantially, to
-say nothing of what they would do to our minds.  It would be much better if we
-could ``glue together'' a numerator and denominator to form a pair---a
-@newterm{compound data object}---that our programs could manipulate in a way
-that would be consistent with regarding a rational number as a single
-conceptual unit.
+Considere la tarea de diseñar un sistema para realizar aritmética con números
+racionales.  Podemos imaginar una operación @code{add-rat} que toma dos números
+racionales y produce su suma.  En términos de datos simples, podemos pensar un
+número racional como dos enteros: un numerador y un denominador.  De esa
+manera, podemos diseñar un programa en el cual cada número racional sería
+representado mediante dos enteros (un numerador y un denominador) y donde
+@code{add-rat} se podría implementar mediante dos procedimientos (uno produce
+el numerador de la suma y otro que produce el denominador).  Pero esto sería
+incómodo, porque de ese modo deberíamos llevar la cuenta en forma explícita de
+cual numerador corresponde a tal denominador.  En un sistema pensado para
+realizar muchas operaciones sobre muchos números racionales, el registro de
+dichos detalles introduciría una confusión sustancial en los programas, sin
+mencionar lo que produciría en nuestras mentes.  Sería mucho mejor si
+pudiésemos ``entrelazar'' un numerador con un denominador para formar un
+par---un @newterm{objeto de datos compuesto}---que pueda ser manipulado por
+nuestros programas de manera consistente con la idea de un número racional como
+unidad conceptual de una sola pieza.
 
-The use of compound data also enables us to increase the modularity of our
-programs.  If we can manipulate rational numbers directly as objects in their
-own right, then we can separate the part of our program that deals with
-rational numbers per se from the details of how rational numbers may be
-represented as pairs of integers.  The general technique of isolating the parts
-of a program that deal with how data objects are represented from the parts of
-a program that deal with how data objects are used is a powerful design
-methodology called @newterm{data abstraction}.  We will see how data
-abstraction makes programs much easier to design, maintain, and modify.
 
-The use of compound data leads to a real increase in the expressive
-power of our programming language.  Consider the idea of forming a
-``linear combination'' @math{ax + by}.  We might like to write
-a procedure that would accept @math{a}, @math{b}, @math{x}, and @math{y} as
-arguments and return the value of @math{ax + by}.  This
-presents no difficulty if the arguments are to be numbers, because we
-can readily define the procedure
+El uso de datos compuestos también permite que aumentemos la modularidad de
+nuestros programas.  Si podemos manipular números racionales directamente como
+objetos por derecho propio, entonces podemos separar la parte de nuestro
+programa que usa números racionales, de los detalles relacionados con la
+representación de los números racionales mediante un par de enteros.  La
+técnica general de aislar las partes de un programa que trabajan con los
+detalles de la representación de los objetos, de las partes del programa que
+usan esos objetos de datos se denomina @newterm{abstracción de datos} y es una
+poderosa metodología de diseño.  Veremos cómo la abstracción de datos hace que
+los programas sean mucho más fáciles de diseñar, mantener y modificar.
+
+El uso de datos compuestos favorece un aumento real en la potencia expresiva de
+nuestro lenguaje de programación.  Considere la idea de formar una
+``combinación lineal'' @math{ax + by}.  Nos gustaría escribir un procedimiento
+que acepte @math{a}, @math{b}, @math{x}, y @math{y} como argumentos y que
+devuelva el valor de @math{ax + by}.  No hay dificultades para hacer esto si
+los argumentos son números, porque podemos definir directamente el
+procedimiento:
 
 @lisp
 (define (linear-combination a b x y)
   (+ (* a x) (* b y)))
 @end lisp
 
+\selectlanguage{english}
+@c FIXME
 @noindent
 But suppose we are not concerned only with numbers.  Suppose we would like to
 express, in procedural terms, the idea that one can form linear combinations
