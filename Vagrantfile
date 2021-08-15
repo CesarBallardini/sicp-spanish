@@ -78,6 +78,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       # Cuando el nombre de dirctorio mas nombre de machine tiene largo mayor a 64 caracteres
       vb.customize ["modifyvm", :id, "--audio", "none"]
 
+      # set timesync parameters to keep the clocks better in sync
+      # sync time every 10 seconds
+      vb.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-interval", 10000 ]
+      # adjustments if drift > 100 ms
+      vb.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-min-adjust", 100 ]
+      # sync time on restore
+      vb.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-on-restore", 1 ]
+      # sync time on start
+      vb.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-start", 1 ]
+      # at 1 second drift, the time will be set and not "smoothly" adjusted
+      vb.customize [ "guestproperty", "set", :id, "/VirtualBox/GuestAdd/VBoxService/--timesync-set-threshold", 1000 ]
+
       # https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifyvm mas parametros para personalizar en VB
     end
   end
