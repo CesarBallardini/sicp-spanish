@@ -132,6 +132,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           sudo -E apt-get autoremove -y > /dev/null 2>&1
           sudo -E apt-get autoclean -y > /dev/null 2>&1
           sudo -E apt-get clean > /dev/null 2>&1
+
+          sudo timedatectl set-ntp on
         SHELL
     end
 
