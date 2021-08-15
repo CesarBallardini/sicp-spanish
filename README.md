@@ -11,7 +11,16 @@ and programming language design and implementation.
 
 Se crea una VM con Virtualbox para generar las versiones  HTML5, ePub y PDF del libro SICP.
 
-Los fuentes del libro se traducirán al castellano de manera incremental.
+Los fuentes del libro se traducirán al castellano de manera incremental. Al momento (agosto 2021) se comienza por el capítulo 2.
+
+Puede leer el capítulo 1 en castellano (cortesía de https://github.com/FedeHC):
+* [Capítulo 1 - Construyendo Abstracciones con Procedimientos](https://github.com/FedeHC/SICP-ES/blob/master/secciones/09-capitulo-1-intro.md)
+* [1.1 Los Elementos de la Programación](https://github.com/FedeHC/SICP-ES/blob/master/secciones/10-capitulo-1-seccion-1-1.md)
+* [1.2 Procedimientos y los Procesos que Generan](https://github.com/FedeHC/SICP-ES/blob/master/secciones/11-capitulo-1-seccion-1-2.md)
+* [1.3 Formulación de Abstracciones con Procedimientos de Orden Superior](https://github.com/FedeHC/SICP-ES/blob/master/secciones/12-capitulo-1-seccion-1-3.md)
+
+
+
 
 
 # Cómo usar este repositorio
@@ -36,6 +45,7 @@ Los archivos generados son:
 
 ## El libro, los vídeos
 
+* https://en.wikipedia.org/wiki/History_of_the_Scheme_programming_language La historia de Scheme, o cuando para entender un [artículo](https://dspace.mit.edu/handle/1721.1/6144) sobre [PLANNER](https://dspace.mit.edu/handle/1721.1/6171) tenes que escribir un lenguaje de programación para usarlo como vehículo de tu comprensión. Aún cuando después mientras trabajás con tus estudiantes graduados tengas una mejor idea, el [Actor model](https://en.wikipedia.org/wiki/Actor_model)
 * http://groups.csail.mit.edu/mac/classes/6.001/abelson-sussman-lectures/ Structure and Interpretation of Computer Programs / Video Lectures by Hal Abelson and Gerald Jay Sussman
 * https://mitpress.mit.edu/sites/default/files/sicp/index.html recursos para el libro
 * https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html el libro online, tal como lo publica el MIT
@@ -44,9 +54,10 @@ Los archivos generados son:
 
 * https://www.youtube.com/playlist?list=PLE18841CABEA24090 MIT 6.001 Structure and Interpretation, 1986 / MIT OpenCourseWare / These twenty video lectures by Hal Abelson and Gerald Jay Sussman are a complete presentation of the course, given in July 1986 for Hewlett-Packard employees, and professionally produced by Hewlett-Packard Television. 
 * https://www.youtube.com/playlist?list=PL7BcsI5ueSNFPCEisbaoQ0kXIDX9rR5FF 6.001 SICP: Structure and Interpretation of Computer Programs (2004) / MIT's legendary introductory computer science course, 6.001 Structure and Interpretation of Computer Programs (SICP), as taught by Prof. Eric Grimson in 2004.
+* http://aduni.org/courses/sicp/ The Structure and Interpretation of Computer Programs / Instructor: Holly Yanco and John Pezaris / ADU was a one-year, intensive post-baccalaureate program in Computer Science based on the undergraduate course of study at the Massachusetts Institute of Technology (MIT). The majority of the instructors were professors from MIT and the program was tuition free. After running from September 2000 through July 2001, seeing the first class to graduation, the program was forced to shut down.
 * https://archive.org/details/mit_ocw_sicp This course has been MIT's introductory pre-professional computer science subject since 1981. It emphasizes the role of computer languages as vehicles for expressing knowledge and it presents basic principles of abstraction and modularity, together with essential techniques for designing and implementing computer languages.
 * https://www.researchgate.net/publication/37597721_Structure_and_Interpretation_of_Computer_Programs_H_Abelson_GJ_Sussman_colaboracion_de_J_Sussman_prol_de_Alan_J_Perlis researchgate
-
+* https://wiki.c2.com/?StructureAndInterpretationOfComputerPrograms
 
 * https://docs.racket-lang.org/sicp-manual/index.html The sicp collection contains a #lang sicp language ideal for studying the book "Structure and Interpretation of Computer Programs" by Gerald Jay Sussman and Hal Abelson. The book is usually referred to simply as SICP. Estudiar SICP usando Racket Scheme. (`#lang sicp`)
 
@@ -108,7 +119,7 @@ Interactive SICP n. Interactive Structure and Interpretation of Computer Program
   * https://mitpress.mit.edu/books/structure-and-interpretation-classical-mechanics-second-edition Structure and Interpretation of Classical Mechanics, Second Edition ([ver](http://libgen.is/search.php?&req=Structure+and+Interpretation+of+Classical+Mechanics&phrase=1&view=simple&column=def&sort=year&sortmode=DESC))
 
 * ¿Porqué no se usa más el libro SICP en MIT?
-  * https://www.thestrangeloop.com/2011/we-really-dont-know-how-to-compute.html la conerencia donde dio la charla
+  * https://www.thestrangeloop.com/2011/we-really-dont-know-how-to-compute.html la conferencia donde dio la charla
   * https://www.infoq.com/presentations/We-Really-Dont-Know-How-To-Compute/ vídeo
   * https://github.com/lyssphacker/talks/blob/master/we-really-do-not-know-how-to-compute/we-really-do-not-know-how-to-compute.md transcripción
   * https://github.com/lyssphacker/talks/blob/master/we-really-do-not-know-how-to-compute/slides/slides.pdf slides
