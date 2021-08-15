@@ -45,7 +45,6 @@ Los archivos generados son:
 
 ## El libro, los vídeos
 
-* https://en.wikipedia.org/wiki/History_of_the_Scheme_programming_language La historia de Scheme, o cuando para entender un [artículo](https://dspace.mit.edu/handle/1721.1/6144) sobre [PLANNER](https://dspace.mit.edu/handle/1721.1/6171) tenes que escribir un lenguaje de programación para usarlo como vehículo de tu comprensión. Aún cuando después mientras trabajás con tus estudiantes graduados tengas una mejor idea, el [Actor model](https://en.wikipedia.org/wiki/Actor_model)
 * http://groups.csail.mit.edu/mac/classes/6.001/abelson-sussman-lectures/ Structure and Interpretation of Computer Programs / Video Lectures by Hal Abelson and Gerald Jay Sussman
 * https://mitpress.mit.edu/sites/default/files/sicp/index.html recursos para el libro
 * https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book.html el libro online, tal como lo publica el MIT
@@ -63,6 +62,11 @@ Los archivos generados son:
 
 
 ## Unofficial Texinfo Format
+
+La *Unofficial Texinfo Format* o UTF para abreviar, es una versión que se escribe en texinfo, directamente desde la versión HTML publicada por MIT online.
+
+Texinfo ([wikipedia](https://es.wikipedia.org/wiki/Texinfo), [GNU](https://www.gnu.org/software/texinfo/)) es un sistema tipográfico
+para la preparación de documentación tanto en línea como impresa desde un solo fichero fuente.
 
 * https://sarabander.github.io/sicp/html/UTF.xhtml
 
@@ -88,6 +92,8 @@ Interactive SICP n. Interactive Structure and Interpretation of Computer Program
 
 ## Discusiones online
 
+Muchas discusiones donde se argumenta a favor y en contra de su uso en la actualidad, y su uso en principiantes.
+
 * https://news.ycombinator.com/item?id=13918465
 * https://news.ycombinator.com/item?id=4860370 Show HN: Interactive SICP (xuanji.appspot.com)
 * https://github.com/sarabander/p2pu-sicp SICP exercise solutions to be shared and discussed in P2PU SICP study group (http://new.p2pu.org/en/groups/sicp-study-group/).
@@ -96,7 +102,9 @@ Interactive SICP n. Interactive Structure and Interpretation of Computer Program
 * https://github.com/vladi99/sicp algunos ejercicios del capítulo 1
 * https://github.com/petrgazarov/sicp ejercicios capítulo 1 y 2
 
-## Variantes
+## Variantes, adaptaciones y traducciones
+
+SICP se ha tratado de adaptar a diferentes lenguajes de programación, y se ha traducido a varios idiomas.
 
 * https://github.com/source-academy/sicp This repository contains the sources for the textbook SICP JS: Structure and Interpretation of Computer Programs, Second Edition, JavaScript Adaptation. See Preface of JavaScript adaptation for background: https://sicp.sourceacademy.org/
 * https://github.com/pepaslabs/SICPChapters This is simply a copy of https://github.com/sarabander/sicp-pdf which has been split into chapters.
@@ -117,6 +125,8 @@ Interactive SICP n. Interactive Structure and Interpretation of Computer Program
   * https://www.infoq.com/presentations/We-Really-Dont-Know-How-To-Compute/ We Really Don't Know How To Compute! Gerald Jay Sussman compares our computational skills with the genome, concluding that we are way behind in creating complex systems such as living organisms, and proposing a few areas of improvement. 2011
   * http://groups.csail.mit.edu/mac/users/gjs/6.945/ Adventures in Advanced Symbolic Programming (Officially: Large-scale Symbolic Systems)
   * https://mitpress.mit.edu/books/structure-and-interpretation-classical-mechanics-second-edition Structure and Interpretation of Classical Mechanics, Second Edition ([ver](http://libgen.is/search.php?&req=Structure+and+Interpretation+of+Classical+Mechanics&phrase=1&view=simple&column=def&sort=year&sortmode=DESC))
+
+* https://en.wikipedia.org/wiki/History_of_the_Scheme_programming_language La historia de Scheme, o cuando para entender un [artículo](https://dspace.mit.edu/handle/1721.1/6144) sobre [PLANNER](https://dspace.mit.edu/handle/1721.1/6171) tenes que escribir un lenguaje de programación para usarlo como vehículo de tu comprensión. Aún cuando después mientras trabajás con tus estudiantes graduados tengas una mejor idea, el [Actor model](https://en.wikipedia.org/wiki/Actor_model)
 
 * ¿Porqué no se usa más el libro SICP en MIT?
   * https://www.thestrangeloop.com/2011/we-really-dont-know-how-to-compute.html la conferencia donde dio la charla
