@@ -240,13 +240,13 @@ Formulating Abstractions@* with Higher-Order Procedures
 
 Construcción de Abstracciones con datos
 
-* 2-1::              Introduction to Data Abstraction
+* 2-1::              Introducción a la abstracción de datos
 * 2-2::              Hierarchical Data and the Closure Property
 * 2-3::              Symbolic Data
 * 2-4::              Multiple Representations for Abstract Data
 * 2-5::              Systems with Generic Operations
 
-Introduction to Data Abstraction
+Introducción a la abstracción de datos
 
 * 2-1-1::            Example: Arithmetic Operations for Rational Numbers
 * 2-1-2::            Abstraction Barriers
@@ -5651,14 +5651,12 @@ procedimiento:
   (+ (* a x) (* b y)))
 @end lisp
 
-\selectlanguage{english}
-@c FIXME
 @noindent
-But suppose we are not concerned only with numbers.  Suppose we would like to
-express, in procedural terms, the idea that one can form linear combinations
-whenever addition and multiplication are defined---for rational numbers,
-complex numbers, polynomials, or whatever.  We could express this as a
-procedure of the form
+Ahora bien, supongamos que nos interesa trabajar no sólo con números.
+Supongamos que nos gustaría expresar, en términos procedurales, la idea de que
+uno puede formar combinaciones lineales siempre que tengamos definidas la
+adición y la multiplicación---para números racionales, números complejos,
+polinomios, etc.  Podríamos expresarlo como procedimiento de la forma:
 
 @lisp
 (define (linear-combination a b x y)
@@ -5666,93 +5664,101 @@ procedure of the form
 @end lisp
 
 @noindent
-where @code{add} and @code{mul} are not the primitive procedures @code{+} and
-@code{*} but rather more complex things that will perform the appropriate
-operations for whatever kinds of data we pass in as the arguments @code{a},
-@code{b}, @code{x}, and @code{y}. The key point is that the only thing
-@code{linear-combination} should need to know about @code{a}, @code{b},
-@code{x}, and @code{y} is that the procedures @code{add} and @code{mul} will
-perform the appropriate manipulations.  From the perspective of the procedure
-@code{linear-combination}, it is irrelevant what @code{a}, @code{b}, @code{x},
-and @code{y} are and even more irrelevant how they might happen to be
-represented in terms of more primitive data.  This same example shows why it is
-important that our programming language provide the ability to manipulate
-compound objects directly: Without this, there is no way for a procedure such
-as @code{linear-combination} to pass its arguments along to @code{add} and
-@code{mul} without having to know their detailed structure.@footnote{The
-ability to directly manipulate procedures provides an analogous increase in the
-expressive power of a programming language.  For example, in
-@ref{1.3.1} we introduced the @code{sum} procedure, which takes a procedure
-@code{term} as an argument and computes the sum of the values of @code{term}
-over some specified interval.  In order to define @code{sum}, it is crucial
-that we be able to speak of a procedure such as @code{term} as an entity in its
-own right, without regard for how @code{term} might be expressed with more
-primitive operations.  Indeed, if we did not have the notion of ``a
-procedure,'' it is doubtful that we would ever even think of the possibility of
-defining an operation such as @code{sum}.  Moreover, insofar as performing the
-summation is concerned, the details of how @code{term} may be constructed from
-more primitive operations are irrelevant.}
+donde @code{add} y @code{mul} no son los procedimientos primitivos @code{+} y
+@code{*} sino cosas más complejas que van a realizar las operaciones que sean
+adecuadas para cualquier tipo de datos que pasemos como los argumentos
+@code{a}, @code{b}, @code{x}, y @code{y}. El punto central es que lo único que
+necesita conocer @code{linear-combination} sobre @code{a}, @code{b}, @code{x},
+y @code{y} es que los procedimientos @code{add} y @code{mul} van a realizar las
+manipulaciones apropiadas.  Desde la perspectiva del procedimiento
+@code{linear-combination}, resulta irrelevante que son @code{a}, @code{b},
+@code{x}, y @code{y} y más irrelevante aún cómo es que se los representa en
+términos de datos más primitivos.  Este ejemplo muestra porque es importante
+que nuestro lenguaje de programación proporcione la capacidad de manipular
+objetos compuestos directamente: sino fuera así, un procedimiento como
+@code{linear-combination} no tiene manera de pasar sus argumentos a @code{add}
+y @code{mul} sin conocer los detalles de su estructura.@footnote{La capacidad
+de manipular procedimientos directamente proporciona un incremento análogo en
+la potencia expresiva de un lenguaje de programación.  Por ejemplo, en
+@ref{1.3.1} introducimos el procedimiento @code{sum}, que toma un procedimiento
+@code{term} como argumento y calcula la suma de los valores de @code{term}
+sobre cierto intervalo especificado.  A los fines de definir @code{sum},
+resulta crucial que seamos capaces de expresarnos sobre un procedimiento como
+@code{term},  como una entidad en sí misma, sin prestar atención a cómo
+@code{term} se expresa en términos de operaciones más primitivas.  Por
+supuesto, si no disponemos de la noción de ``un procedimiento'', dudo que
+podamos incluso pensar en la posibilidad de definir una operación como
+@code{sum}.  Además, en lo que respecta a la sumatoria, resultan irrelevantes
+los detalles de la contrucción de @code{term} a partir de las operaciones
+más primitivas.}
 
-We begin this chapter by implementing the rational-number arithmetic system
-mentioned above.  This will form the background for our discussion of compound
-data and data abstraction.  As with compound procedures, the main issue to be
-addressed is that of abstraction as a technique for coping with complexity, and
-we will see how data abstraction enables us to erect suitable
-@newterm{abstraction barriers} between different parts of a program.
+Al principio de este capítulo implementaremos el sistema aritmético de números
+racionales que se menciona más arriba.  El mismo será el trasfondo para nuestra
+discusión sobre datos compuestos y abstracción de datos.  Así como trabajamos
+con los procedimientos compuestos, el tema principal que estudiaremos será la
+abstracción como técnica para lidiar con la complejidad, y vamos a ver cómo la
+abstracción de datos nos permite erigir @newterm{barreras de abstracción} entre
+las diferentes partes de un programa.
 
-We will see that the key to forming compound data is that a programming
-language should provide some kind of ``glue'' so that data objects can be
-combined to form more complex data objects.  There are many possible kinds of
-glue.  Indeed, we will discover how to form compound data using no special
-``data'' operations at all, only procedures.  This will further blur the
-distinction between ``procedure'' and ``data,'' which was already becoming
-tenuous toward the end of chapter 1.  We will also explore some
-conventional techniques for representing sequences and trees.  One key idea in
-dealing with compound data is the notion of @newterm{closure}---that the glue
-we use for combining data objects should allow us to combine not only primitive
-data objects, but compound data objects as well.  Another key idea is that
-compound data objects can serve as @newterm{conventional interfaces} for
-combining program modules in mix-and-match ways.  We illustrate some of these
-ideas by presenting a simple graphics language that exploits closure.
+Veremos que la clave para armar datos compuestos reside en que el lenguaje de
+programación nos debe proporcionar alguna clase de ``pegamento'' de manera de
+formar objetos compuestos más complejos, a partir de la combinación de objetos.
+Existen varias clases posibles de pegamento.  Por cierto, descubriremos cómo
+formar datos compuestos sin necesidad de utilizar operaciones de ``datos'',
+sino sólo procedimientos.  Con esto vamos a difuminar aún más la distinción
+entre ``procedimientos'' y ``datos'', la cual ya era tenue al final del
+capítulo 1.  También vamos a explorar algunas técnicas convencionales para
+representar secuencias y árboles.  Una idea clave a la hora de trabajar con
+datos compuestos es la noción de @newterm{closure}---que el pegamento usado
+para combinar objetos de datos nos debe permitir combinar no sólo objetos de
+datos primitivos, sino también objetos compuestos.  Otra idea clave es que los
+objetos de datos compuestos pueden servir como @newterm{interfaces
+convencionales} para combinar módulos de programa de diferentes maneras.  Para
+ilustrar algunas de estas ideas se presenta un lenguaje de gráficos que explota
+el concepto de @emph{closure}.
 
 \enlargethispage{\baselineskip}
 
-We will then augment the representational power of our language by introducing
-@newterm{symbolic expressions}---data whose elementary parts can be arbitrary
-symbols rather than only numbers.  We explore various alternatives for
-representing sets of objects.  We will find that, just as a given numerical
-function can be computed by many different computational processes, there are
-many ways in which a given data structure can be represented in terms of
-simpler objects, and the choice of representation can have significant impact
-on the time and space requirements of processes that manipulate the data.  We
-will investigate these ideas in the context of symbolic differentiation, the
-representation of sets, and the encoding of information.
+Luego aumentaremos la potencia de representación de nuestro lenguaje mediante
+la introducción de @newterm{expresiones simbólicas}---datos cuyas partes
+elementales pueden ser símbolos arbitrarios, y no sólo números.  Exploraremos
+varias alternativas para representar conjuntos de objetos.  Encontraremos que,
+así como en el caso de una función numérica dada, ésta puede calcularse
+mediante diferentes procesos computacionales, hay varias maneras de representar
+una estructura de datos dada, en términos de objetos más simples, y que la
+elección de la representación puede impactar significativamente en los
+requerimientos de tiempo y espacio de los procesos que manipulan esos datos.
+Investigaremos esas ideas en el contexto de la obtención simbólica de las
+derivadas, la representación de conjuntos y la codificación de la información.
 
-Next we will take up the problem of working with data that may be represented
-differently by different parts of a program.  This leads to the need to
-implement @newterm{generic operations}, which must handle many different types
-of data.  Maintaining modularity in the presence of generic operations requires
-more powerful abstraction barriers than can be erected with simple data
-abstraction alone.  In particular, we introduce @newterm{data-directed
-programming} as a technique that allows individual data representations to be
-designed in isolation and then combined @newterm{additively} (i.e., without
-modification).  To illustrate the power of this approach to system design, we
-close the chapter by applying what we have learned to the implementation of a
-package for performing symbolic arithmetic on polynomials, in which the
-coefficients of the polynomials can be integers, rational numbers, complex
-numbers, and even other polynomials.
+A continuación nos concentraremos en el problema de trabajar con datos que
+pueden estar representados de manera diferente en diferentes partes del
+programa.  Esto nos lleva a la necesidad de implementar @newterm{operaciones
+genéricas}, que deben poder manejar diferentes tipos de datos.  Para mantener
+la modularidad en presencia de operaciones genéricas se requieren barreras de
+abstracción más poderosas de las erigidas sólo con simples abstracciones de
+datos.  En particular, vamos a introducir la técnica denominada
+@newterm{programación dirigida por datos} que permite que cada representación
+individual de datos se diseñe de manera aislada y luego se combine de manera
+@newterm{aditiva} (o sea, sin modificación).  Para ilustrar la potencia de este
+enfoque al diseño de sistemas, cerramos el capítulo con la aplicación de lo
+aprendido en la implementación de un paquete para realizar aritmética simbólica
+sobre polinomios, cuyos coeficientes pueden ser enteros, números racionales,
+números complejos e incluso otros polinomios.
 
 @menu
-* 2-1::              Introduction to Data Abstraction
+* 2-1::              Introducción a la abstracción de datos
 * 2-2::              Hierarchical Data and the Closure Property
 * 2-3::              Symbolic Data
 * 2-4::              Multiple Representations for Abstract Data
 * 2-5::              Systems with Generic Operations
 @end menu
 
-@section Introduction to Data Abstraction
+@section Introducción a la abstracción de datos
 @node	2.1, 2.2, Capítulo 2, Capítulo 2
 
+\selectlanguage{english}
+@c FIXME
 In @ref{1.1.8}, we noted that a procedure used as an element in
 creating a more complex procedure could be regarded not only as a collection of
 particular operations but also as a procedural abstraction.  That is, the
