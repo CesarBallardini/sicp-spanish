@@ -248,7 +248,7 @@ Construcción de Abstracciones con datos
 
 Introducción a la abstracción de datos
 
-* 2-1-1::            Example: Arithmetic Operations for Rational Numbers
+* 2-1-1::            Ejemplo: Operaciones aritméticas con números racionales
 * 2-1-2::            Abstraction Barriers
 * 2-1-3::            What Is Meant by Data?
 * 2-1-4::            Extended Exercise: Interval Arithmetic
@@ -5757,8 +5757,6 @@ números complejos e incluso otros polinomios.
 @section Introducción a la abstracción de datos
 @node	2.1, 2.2, Capítulo 2, Capítulo 2
 
-\selectlanguage{english}
-@c FIXME
 In @ref{1.1.8}, we noted that a procedure used as an element in
 creating a more complex procedure could be regarded not only as a collection of
 particular operations but also as a procedural abstraction.  That is, the
@@ -5784,15 +5782,17 @@ illustrate this technique, we will consider how to design a set of procedures
 for manipulating rational numbers.
 
 @menu
-* 2-1-1::            Example: Arithmetic Operations for Rational Numbers
+* 2-1-1::            Ejemplo: Operaciones aritméticas con números racionales
 * 2-1-2::            Abstraction Barriers
 * 2-1-3::            What Is Meant by Data?
 * 2-1-4::            Extended Exercise: Interval Arithmetic
 @end menu
 
-@subsection Example: Arithmetic Operations@* for Rational Numbers
+@subsection Ejemplo: Operaciones aritméticas@* con números racionales
 @node	2.1.1, 2.1.2, 2.1, 2.1
 
+\selectlanguage{english}
+@c FIXME
 Suppose we want to do arithmetic with rational numbers.  We want to be able to
 add, subtract, multiply, and divide them and to test whether two rational
 numbers are equal.
