@@ -11,7 +11,7 @@ and programming language design and implementation.
 
 Se crea una VM con Virtualbox para generar las versiones  HTML5, ePub y PDF del libro SICP.
 
-Los fuentes del libro se traducirán al castellano de manera incremental. Al momento (agosto 2021) se comienza por el capítulo 2.
+Los fuentes del libro (`sicp.texi`) se traducirán al castellano de manera incremental. La traducción se hará en dos etapas: se busca primero obtener la versión PDF y luego las versiones HTML5 y ePub.  Al momento (octubre 2021) se comienza por el capítulo 2.
 
 Puede leer el capítulo 1 en castellano (cortesía de https://github.com/FedeHC):
 * [Capítulo 1 - Construyendo Abstracciones con Procedimientos](https://github.com/FedeHC/SICP-ES/blob/master/secciones/09-capitulo-1-intro.md)
