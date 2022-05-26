@@ -30,6 +30,13 @@ git clone https://github.com/CesarBallardini/sicp-spanish
 cd sicp-spanish/
 time vagrant up    # crea la VM y genera ePub, PDF y HTML5
 
+
+# editar fuente del libro /vagrant/sicp-es.texi
+
+# generar PDF en /vagrant/sicp-es.pdf
+time ( pushd /vagrant/sicp-pdf/src/ ; cp /vagrant/sicp-es.texi sicp.texi ; make clean ; make ; popd)
+
+
 vagrant halt       # detiene la VM
 vagrant destroy -f # destruye la VM y su contenido
 ```
