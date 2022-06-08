@@ -59,7 +59,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     srv.vm.box = "ubuntu/focal64"
 
-    srv.vm.network "private_network", ip: "192.168.56.10"
+    srv.vm.network "private_network", ip: "192.168.56.20"
     srv.vm.box_check_update = false
     srv.ssh.forward_agent = true
     srv.ssh.forward_x11 = true
