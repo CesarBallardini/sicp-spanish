@@ -113,7 +113,7 @@ Muchas discusiones donde se argumenta a favor y en contra de su uso en la actual
 
 SICP se ha tratado de adaptar a diferentes lenguajes de programación, y se ha traducido a varios idiomas.
 
-* https://github.com/source-academy/sicp This repository contains the sources for the textbook SICP JS: Structure and Interpretation of Computer Programs, Second Edition, JavaScript Adaptation. See Preface of JavaScript adaptation for background: https://sicp.sourceacademy.org/
+* https://github.com/source-academy/sicp This repository contains the sources for the textbook SICP JS: Structure and Interpretation of Computer Programs, Second Edition, JavaScript Adaptation. https://sourceacademy.org/sicpjs/index
 * https://github.com/pepaslabs/SICPChapters This is simply a copy of https://github.com/sarabander/sicp-pdf which has been split into chapters.
 * https://github.com/pepaslabs/SICPChapterBooklets After splitting SICP into chapters, I then used impositioner to reformat it to be printed, cut in half, and bound into 5.5" x 8.5" booklets.
 * https://opendocs.github.io/sicp/ https://github.com/opendocs/sicp sólo el PDF: This PDF copy has been created from github.com/sarabander/sicp-pdf, a project by Andres Raba to render the textbook with Texinfo and LaTeX. This PDF copy is versioned as: Unofficial Texinfo Format 2.andresraba5.6.
